@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Model Test Form</title>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+</head>
+<body ng-app="modelTest">
+
+<class="row">
+<form class ="col-md-8" novalidate name="userform">
+
+
+	<div class="form-group"> 
+	<!-- ng-class="{'has-error': userForm.first_name.$invalid && userform.first_name.$touched, 'has success'}" -->
+
+    <label for="first_name">First Name</label>
+    <input type="text" class="form-control" id="first_name" ng-model="user.firstName" name="first_name" maxlength="50" required>
+    </div>
+
+    <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input type="text" class="form-control" id="last_name"  ng-model="user.lastName" maxlength="100" required>
+    </div>
+
+    <div class="form-group">
+    <label for="birth">Date of birth</label>
+    <input type="email" class="form-control" id="email" ng-model="user.dob" required>
+    </div>
+
+    <div class="form-group">
+    <label for="github">Github</label>
+    <input type="github" class="form-control" id="github" ng-model="user.github" minlength="6" required>
+    </div>
+
+    <div class="form-group">
+    <label for="icon">Icon</label>
+    </div>
+</form>
+
+	<div class="col-md-4">
+	<div class="well" ng-if="userForm.$valid">
+	<h2>Welcome</h2>
+	<p>
+		{{ user.firstName}} {{user.lastName}},
+	</p>
+	<p>
+		<a href="{{user.github}}"></a>
+	</p>
+	</div>
+	</div>
+
+
+</body>
+</html>

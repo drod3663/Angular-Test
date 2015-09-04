@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Angular</title>
+
+<style>
+
+	li:first-child {
+		font-style: italic;
+	}
+	li:last-child {
+		font-weight: bold;
+	}
+</style>
+</head>
+<body ng-app="templateTest">
+
+	<h1> {{ "Hello Glacier!" | uppercase }} </h1>
+
+	
+
+	<ul>
+	    <li ng-repeat="num in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]" ng-hide="num % 3 == 0">
+	        {{ num }}
+	    </li>
+	</ul>
+
+	<ul>
+    	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter }}</li>
+	</ul>
+
+	<img  ng-src="/img/{{ 'cat' }}.jpg" alt="Cat gifs are always funny">
+
+<script type="text/javascript" src="/js/angular.min.js"></script>
+<script type="text/javascript" src="/js/templateTest.js"></script>
+</body>
+</html>
+
+novalidate name="userform"
+ng-if="userform.$valid"
+
+input.ng-touched.ng-invalid {
+	background-color:
+}
