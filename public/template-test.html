@@ -26,10 +26,15 @@
 	</ul>
 
 	<ul>
-    	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter }}</li>
+    	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter | uppercase}}</li>
 	</ul>
 
-	<img  ng-src="/img/{{ 'cat' }}.jpg" alt="Cat gifs are always funny">
+	<ul>
+    	<li ng-repeat="letter in ['A', 'B', 'C', 'D', 'E', 'F']">{{ letter | lowercase}}</li>
+	</ul>
+
+	<!-- <img  ng-src="/img/{{ 'cat' }}.jpg" alt="Cat gifs are always funny"> -->
+	<img ng-repeat=" img in ['people', 'sports', 'city' ]" ng-src="http://lorempixel.com/400/200/{{ img }}">
 
 <script type="text/javascript" src="/js/angular.min.js"></script>
 <script type="text/javascript" src="/js/templateTest.js"></script>
@@ -42,3 +47,4 @@ ng-if="userform.$valid"
 input.ng-touched.ng-invalid {
 	background-color:
 }
+<!-- ng-class="{'has-error': userForm.first_name.$invalid && userform.first_name.$touched, 'has success'}" -->

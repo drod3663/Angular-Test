@@ -1,0 +1,12 @@
+#logo {
+	height: 15%;
+	width: 15%;
+	position: relative;
+	/*bottom: 10px;*/
+	
+	left:280px;
+}
+
+input.ng-touched.ng-invalid {
+	background-color: #EE6363;
+}
